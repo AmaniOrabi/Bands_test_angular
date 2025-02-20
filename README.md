@@ -1,5 +1,6 @@
 # QualiproFront
 This application displays and manage a list of musical bands and their associated information in a table, fetched from an API.
+This is the link to the demo vide of the app : https://drive.google.com/file/d/1oEjEAo6qb9-ktv14MQhOag6TFih4Dgw1/view?usp=sharing
 
 ## Features
 
