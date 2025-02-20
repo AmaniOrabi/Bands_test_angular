@@ -1,6 +1,16 @@
 # QualiproFront
+This application displays and manage a list of musical bands and their associated information in a table, fetched from an API.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
+## Features
+
+- Filtering of table data
+- Add/Delete/Edit band functionality 
+
+## Technologies Used
+
+- **Frontend**: Angular version 17.0.1. [Angular CLI](https://github.com/angular/angular-cli)
+- **Node.js**: v18.18.0
+- **NPM**: v10.1.0
 
 ## Development server
 
