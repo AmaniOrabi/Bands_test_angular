@@ -1,0 +1,36 @@
+.modal-background {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-container {
+  @apply bg-white p-10 rounded-lg shadow-lg max-w-md w-full;
+}
+
+.modal-heading {
+  @apply text-lg font-semibold mb-8;
+}
+
+.form-group {
+  @apply mb-4;
+}
+.field-container {
+  @apply flex items-center justify-between gap-12 pb-4;
+}
+.form-label {
+  @apply block text-gray-700 font-medium mb-1;
+}
+
+.form-input {
+  @apply w-full px-4 py-2  border border-gray-300 rounded-md focus:outline-none relative;
+}
+
+.modal-button-submit {
+  @apply bg-slate-900 text-white px-4 py-2 rounded-md cursor-pointer transition-colors hover:bg-slate-600 focus:outline-none;
+}
+
+.modal-button-cancel {
+  @apply bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400 focus:outline-none;
+}
+.error-message {
+  @apply text-red-500 text-sm mt-1 absolute;
+}

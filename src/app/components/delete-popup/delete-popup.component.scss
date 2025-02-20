@@ -1,0 +1,23 @@
+.modal-background {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-container {
+  @apply bg-white p-6 rounded-lg shadow-lg max-w-sm w-full;
+}
+
+.modal-heading {
+  @apply text-lg font-semibold mb-4;
+}
+
+.modal-buttons {
+  @apply flex justify-end pt-6;
+}
+
+.modal-button-delete {
+  @apply mr-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none;
+}
+
+.modal-button-cancel {
+  @apply bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400 focus:outline-none;
+}

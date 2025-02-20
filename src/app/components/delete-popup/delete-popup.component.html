@@ -1,0 +1,11 @@
+<div *ngIf="isOpen" class="modal-background" (click)="close()">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    <h2 class="modal-heading">Êtes vous sûr de supprimer le groupe?</h2>
+    <div class="modal-buttons">
+      <button (click)="confirmDelete()" class="modal-button-delete">
+        Supprimer
+      </button>
+      <button (click)="close()" class="modal-button-cancel">Annuler</button>
+    </div>
+  </div>
+</div>

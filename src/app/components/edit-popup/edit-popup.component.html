@@ -1,0 +1,180 @@
+<div *ngIf="isOpen" class="modal-background" (click)="close()">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    <h2 class="modal-heading">Modifier un Groupe</h2>
+    <form (ngSubmit)="submitForm()" #bandForm="ngForm">
+      <div class="field-container">
+        <div class="form-group">
+          <label for="name" class="form-label">Nom du Groupe</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="editedBand.name"
+            #name="ngModel"
+            required
+            class="form-input"
+          />
+          <div *ngIf="name.touched && name.invalid" class="error-message">
+            Ce champ est obligatoire.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="origin" class="form-label">Origine</label>
+          <input
+            type="text"
+            id="origin"
+            name="origin"
+            [(ngModel)]="editedBand.origin"
+            #origin="ngModel"
+            required
+            class="form-input"
+          />
+          <div *ngIf="origin.touched && origin.invalid" class="error-message">
+            Ce champ est obligatoire.
+          </div>
+        </div>
+      </div>
+      <div class="field-container">
+        <div class="form-group">
+          <label for="city" class="form-label">Ville</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            [(ngModel)]="editedBand.city"
+            #city="ngModel"
+            required
+            class="form-input"
+          />
+          <div *ngIf="city.touched && city.invalid" class="error-message">
+            Ce champ est obligatoire.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="startYear" class="form-label">Année Début</label>
+          <input
+            type="number"
+            id="startYear"
+            name="startYear"
+            [(ngModel)]="editedBand.startYear"
+            #startYear="ngModel"
+            required
+            class="form-input"
+          />
+          <div
+            *ngIf="startYear.touched && startYear.invalid"
+            class="error-message"
+          >
+            Ce champ est obligatoire.
+          </div>
+        </div>
+      </div>
+      <div class="field-container">
+        <div class="form-group">
+          <label for="separationYear" class="form-label"
+            >Année Séparation</label
+          >
+          <input
+            type="number"
+            id="separationYear"
+            name="separationYear"
+            [(ngModel)]="editedBand.separationYear"
+            #separationYear="ngModel"
+            required
+            class="form-input"
+          />
+          <div
+            *ngIf="separationYear.touched && separationYear.invalid"
+            class="error-message"
+          >
+            Ce champ est obligatoire.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="founders" class="form-label">Fondateurs</label>
+          <input
+            type="text"
+            id="founders"
+            name="founders"
+            [(ngModel)]="editedBand.founders"
+            #founders="ngModel"
+            required
+            class="form-input"
+          />
+          <div
+            *ngIf="founders.touched && founders.invalid"
+            class="error-message"
+          >
+            Ce champ est obligatoire.
+          </div>
+        </div>
+      </div>
+      <div class="field-container">
+        <div class="form-group">
+          <label for="members" class="form-label">Membres</label>
+          <input
+            type="text"
+            id="members"
+            name="members"
+            [(ngModel)]="editedBand.members"
+            #members="ngModel"
+            required
+            class="form-input"
+          />
+          <div *ngIf="members.touched && members.invalid" class="error-message">
+            Ce champ est obligatoire.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="musicalStyle" class="form-label">Style de musique</label>
+          <input
+            type="text"
+            id="musicalStyle"
+            name="musicalStyle"
+            [(ngModel)]="editedBand.musicalStyle"
+            #musicalStyle="ngModel"
+            required
+            class="form-input"
+          />
+          <div
+            *ngIf="musicalStyle.touched && musicalStyle.invalid"
+            class="error-message"
+          >
+            Ce champ est obligatoire.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="presentation" class="form-label">Présentation</label>
+        <textarea
+          id="presentation"
+          name="presentation"
+          [(ngModel)]="editedBand.presentation"
+          #presentation="ngModel"
+          required
+          class="form-input"
+        ></textarea>
+        <div
+          *ngIf="presentation.touched && presentation.invalid"
+          class="error-message"
+        >
+          Ce champ est obligatoire.
+        </div>
+      </div>
+
+      <div class="flex justify-between">
+        <button
+          type="submit"
+          [disabled]="!bandForm.valid"
+          class="modal-button-submit"
+        >
+          Modifier Groupe
+        </button>
+        <button type="button" (click)="close()" class="modal-button-cancel">
+          Annuler
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
